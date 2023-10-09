@@ -131,7 +131,7 @@ function place() {
     .value.trim()
     .split(";");
 
-  robot = new Robot({ x, y }, facing, {
+  robot = new Robot({ x, y }, facing.toUpperCase(), {
     gridHeightBounds: gridDimensions.height,
     gridWidthBounds: gridDimensions.width,
   });
