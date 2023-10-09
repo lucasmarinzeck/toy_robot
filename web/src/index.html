@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.init-form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 50%;
+    margin: 4rem auto;
+}
+.init-form input {
+    width: 200px;
+    padding: 10px;
+    margin: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.grid-container {
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2px;
+    margin: 2rem auto;
+    border: 1px solid;
+}
+.grid-cell {
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button {
+    background-color: #0074d9; /* Button background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* Remove the button border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to a pointer on hover */
+    font-size: 16px; /* Font size */
+    margin: 1rem;
+    width: 15%;
+    min-width: 15%
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="init-form">
+            <div>
+                <label for="coordinates">Enter coordinates and facing:</label>
+                <input type="text" id="coordinates"placeholder="ex: 0;0;EAST">
+            </div>
+            <button  class="button" onclick="place()">Place</button>
+        </div>
+        <div class="grid-container"></div>
+        <button class="button" type="button" onclick="move()">Move</button>
+        <button class="button" type="button" onclick="turn('LEFT')">Turn Left</button>
+        <button class="button" type="button" onclick="turn('RIGHT')">Turn Right</button>
+    </div>
+    
+</body>
+<script type="text/javascript" src="index.js"></script>
+<script language="javascript">
+    drawGrid()
+</script>
+</html>
